@@ -1,0 +1,383 @@
+/** final-frontier.css
+ * CSS rules for the final frontier CMS app 
+ * 
+ * Place your custom CSS rules in this document 
+ */
+
+@font-face {
+    font-family: 'TNGCredits';
+    src: url('../assets/TNG_Credits.woff') format('woff');
+}
+
+/**All style**/
+
+h1, h2, h3, h4{
+        font-family: "TNGCredits" !important;
+}
+
+*{
+    font-family: "Verdana";
+}
+
+.card{
+    box-shadow: gray 2px 2px 2px;
+    border-radius: 25px;
+}
+
+button{
+    
+    box-shadow:black 2px 2px 2px;
+}
+
+/****main style***/
+
+@media screen and (min-width: 490px){
+    .main-header{
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 100px;
+    position:relative;
+}
+
+.search{
+    position:relative;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+#search-button{
+    height: 30px;
+    width:100px;
+    font-size:20px;
+    text-align:center;
+}
+
+#search-bar{
+    position: relative;
+    width: 70%;
+    height:25px;
+    font-size:20px;
+    
+    
+}   
+#main-body{
+    position:absolute;
+   display: grid;
+    grid-template-columns:25% 25% 25% 25%;
+}
+
+.card{
+    
+    margin: 10px;
+    border: 2px solid black;
+    height: 300px;
+    width: 23vw;
+    
+}
+}
+@media screen and (max-width: 489px){
+    .main-header{
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 45px;
+    position:relative;
+}
+
+.search{
+    position:relative;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+#search-button{
+    height: 25px;
+    width:70px;
+    font-size:15px;
+    text-align:center;
+}
+
+#search-bar{
+    position: relative;
+    width: 70%;
+    height:15px;
+    
+}
+    
+    
+    #main-body{
+        width:85%;
+        position: absolute;
+        display: flex;
+        flex-direction:column;
+     justify-content:center;   
+    }
+    
+    
+.card{
+    margin: 10px;
+    border: 2px solid black;
+    height: 300px;
+    width:100%;
+    }
+}
+
+/****article style***/
+
+
+
+/**card view of article**/
+
+
+.article-title{
+    position:relative;
+    text-align: center;
+    height:27px;
+    
+}
+
+#content{
+    height:300px;
+    width:445px;
+    border-radius: 25px;
+}
+
+#card-view.card-style{
+    
+    height:300px;
+    width:445px;
+    overflow:hidden;
+    border: 1px solid black;
+    box-shadow: gray 3px 3px 3px;
+    border-radius: 25px;
+}
+
+
+#read-more{
+    position: relative;
+    top: 215px;
+    visibility: visible;
+}
+
+#close{
+    position: absolute;
+    float:right;
+    visibility: hidden;
+}
+
+
+/**expanded view of article**/
+
+
+#content.expanded-div{
+    position: relative;
+    width: auto;
+    padding: 10px;
+    height:100%;
+}
+
+#read-more.expanded-div{
+    visibility:hidden;
+}
+
+#close.expanded-div{
+    visibility:visible;
+    position:relative;
+}
+
+/**Audio Card style**/
+
+
+#audio{
+text-align:center}
+
+
+.audio-title{
+    text-align: center;
+    height:27px;
+}
+
+.card-style{
+    
+    height:300px;
+    width:445px;
+    overflow:hidden;
+    border: 1px solid black;
+    box-shadow: gray 3px 3px 3px;
+    border-radius: 25px;
+}
+
+
+/**Video Card Style**/
+
+
+#video{
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+    position:relative;
+    bottom:15px;
+}
+
+.video-title{
+    text-align:center;
+    height:5px;
+}
+
+/**Gallery Card Style**/
+
+
+#gallery.card-style .container{
+    margin-top:-50px;
+}
+
+
+.full-gallery .gallery-title{
+        padding-top:10px;
+    }
+
+.gallery-title{
+    margin-bottom:10px;
+    left:50%;
+}
+
+.card-style img:nth-child(n+3){
+    display:none;
+}
+
+
+
+img, .para{
+    margin-left:10px;
+    height:200px;
+    margin-right: 10px;
+    margin-top:50px;
+}
+
+
+.button-pos1 {
+    position:absolute;
+    top:350px;
+    text-align:center;
+    width:447px;
+}
+
+#see-gallery{
+    visibility: visible;
+}
+
+#see-gallery.full-gallery{
+    visibility:hidden;
+}
+
+
+#close-gal{
+    visibility:hidden;
+}
+
+/**full Gallery**/
+
+@media screen and (min-width: 490px){
+
+    
+    
+.full-gallery .para{
+    grid-column-start:3;
+    grid-column-end: 4;
+    grid-row:1;
+    grid-row-end:1;
+    
+}
+
+#close-gal.full-gallery{
+    visibility:visible;
+    right: 3%;
+    position:relative;
+    
+    float: right;
+    bottom: 35px;
+    margin-right: 15px;
+    }
+
+#content.full-gallery{
+    width:100%;
+    height:auto;
+}
+
+
+.full-gallery .container{
+    padding-top:10px;
+   display: grid;
+   grid-template-columns:33% 33% 33%;
+    justify-items:center;
+    
+}
+
+ .container{
+    display: flex;
+    
+}
+
+.container img, .container .para{
+    display:flex;
+    margin-top:25px;
+}
+
+.full-gallery .container img, .full-gallery .container .para {
+    width: 75%;
+    height: auto;
+    margin-bottom:10px;
+    
+}
+
+}
+
+@media screen and (max-width: 489px){
+    
+    #close-gal.full-gallery{
+    visibility:visible;
+    right: 4%;
+    position:absolute;
+    top:100px;
+    
+}
+    
+    
+    .container{
+    display: flex;
+    
+}
+    
+    #content.full-gallery{
+    width:100%;
+    height:auto;
+}
+    
+    .full-gallery .container{
+     text-align:center;
+        display: flex;
+        flex-direction:column;
+     justify-content:center; 
+        height:100%;
+    }
+    
+    .full-gallery .container img, .full-gallery .container .para{
+     
+    width: 94%;
+    height: auto;
+    margin-bottom:10px;
+    margin-top:10px;
+       
+    }
+    
+    .full-gallery .button-pos1{
+        display:none;
+    }
+    
+    
+    .full-gallery  .para{
+        margin-top:70px !important;
+        order:-1;
+    }
+    
+}
+
