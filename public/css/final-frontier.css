@@ -31,6 +31,7 @@ button{
 
 /****main style***/
 
+
 @media screen and (min-width: 490px){
     .main-header{
     text-align: center;
@@ -135,10 +136,14 @@ button{
     
 }
 
-#content{
+#content {
     height:300px;
-    width:445px;
+    width:100%;
     border-radius: 25px;
+    
+   display: grid;
+    grid-template-columns:25% 25% 25% 25%;
+    
 }
 
 #card-view.card-style{
