@@ -1,39 +1,32 @@
 const fs = require('fs');
-const url = require('url');
-const path = require('path');
+const determineContentType = require('./determine-content-type');
 
+/** @function serveFile~callback 
+ * @param {string|object} error - any error encountered by 
+ * serveFile().
+ */
 
-module.exports = function serveFile(req, res) {
-     
-    var pathname = url.parse(req.url).pathname; 
-    var filePath = path.join('public/assets', pathname);
+/** @module serveFile 
+ * Provides a function for serving files in the public 
+ * directory matching the supplied filePath
+ * @param {string} filePath - the path to the file
+ * @param {http.serverResponse} res - the response object
+ * @param {serveFile~callback} callback - a callback function 
+ * to invoke once the asynchronous process completes.
+ */
+module.exports = function serveFile(filePath, res, callback) {
+  
+  // Read the file asynchronously
+  fs.readFile(filePath, function(err, body){
+    if(err) return callback(err);
     
-    fs.readFile(filePath, function(err, body){
-      if(err) {
-      res.statusCode = 404;
-      res.statusMessage = "Not Found";
-      res.end();
-      return;
-        }
-      res.setHeader("Content-Length", body.length);
-      
-      switch (path.extname(filePath).toLowerCase()) {
-          case ".html":
-          case ".htm":
-            res.setHeader("Content-Type", "text/html");
-            break;
-          case ".css":
-            res.setHeader("Content-Type", "text/css");
-            break;
-          case ".js":
-            res.setHeader("Content-Type", "text/javascript");
-            break;
-          default:
-            res.setHeader("Content-Type", "application/octet-stream");
-            break;
-        }
-     res.end(body);
-    })
-
-
+    // Set the Content-Length
+    res.setHeader("Content-Length", body.length);
+    
+    // Set the Content-Type
+    res.setHeader("Content-Type", determineContentType(filePath));
+    
+    // Serve the file data
+    res.end(body);
+  });
 }

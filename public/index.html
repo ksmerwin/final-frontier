@@ -1,0 +1,113 @@
+<!doctype HTML>
+<html lang="en">
+  <head>
+      <link href="css/final-frontier.css" rel="stylesheet" type="text/css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>
+        Final Frontier
+      </title>
+      <h1 class="main-header">
+          Final Frontier
+      </h1>
+      <div class="search">
+          <input id="search-bar" type="text">
+              <button id="search-button">
+                  Search
+              </button>
+      </div>
+  </head>
+  
+    <body>
+      <div id="main-body">
+      <div id="content">
+        <html>
+            <body>
+               <div id="gallery"  class="card-style">     
+                  <h2 class="gallery-title" style="text-align: center">${cardData.title}
+                      <div class="button-pos1"><button onclick="seeGallery()" id="see-gallery">
+                        See Gallery
+                      </button> 
+                      </div> 
+                  </h2>
+                  <button onclick="seeGallery()" id="close-gal">
+                    Close
+                  </button>
+                  <div class="container" >
+                      <img class="img0" src ="https://picsum.photos/200">
+                      <p  class="para">${cardData.description}</p>
+                      <img   class="img1" src ="${cardData.images[0]}">
+                      <img   class="img2" src ="${cardData.images[1]}">
+                      <img   class="img3" src ="${cardData.images[2]}">
+                      <img   class="img4" src ="${cardData.images[3]}">
+                      <img   class="img5" src ="${cardData.images[4]}">
+                      <img  class="img6" src ="${cardData.images[5]}">
+                      <img   class="img7" src ="${cardData.images[6]}">
+                      <img   class="img8" src ="${cardData.images[7]}">
+                  </div>
+               </div>
+          </body>
+        </html>
+        
+        <html>
+            <body>
+                <div class="card-style">
+                    <h2 class="audio-title">Audio Title</h2>
+                    <div id="audio-pos" style="text-align:center">
+                        <audio id="audio" controls="controls" src ="assets/ep93_space_medicine.mp3"></audio>
+                    </div>
+                    <p style="margin-left: 10px">
+                        blalbalbal
+                               blalbalalba
+                    </p>
+                </div> 
+            </body>
+        </html>
+            
+        <html>
+            <body>
+                <div id="card-view" class="card-style">
+                    <h2 class="article-title">${cardData.title}<button onclick="expand()" id="close">
+                        Close
+                        </button>
+                        <div class="button-pos">
+                            <button type="button" onclick="expand()" id="read-more">
+                                Read More
+                            </button>
+                        </div>
+                    </h2>
+                <p>${cardData.body}</p>
+                </div>
+            </body>
+        </html>
+              
+        <html>
+            <body>
+                <div class="video-layout card-style">
+                <div class="card-style">   
+                <div class="video-title">
+                   <h2>
+                       ${cardData.title}
+                   </h2>
+                </div>
+                <video id="video" width="250" height="250" controls src="${cardData.source}"></video>
+                <p>${cardData.description}
+                </p>
+                </div>
+                </div>
+            </body>
+        </html>
+              
+         
+             
+         
+      </div>
+      </div>
+    </body>    
+    
+    
+    
+      <script src="generate-card-html.js"></script>
+      <script src="final-frontier.js"></script>
+      <script src="main.js"></script>
+  
+</html>

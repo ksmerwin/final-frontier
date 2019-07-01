@@ -1,0 +1,9 @@
+h1 {
+  color: yellow;
+  text-shadow: orange 5px 5px 5px;
+}
+
+.orange {
+  color: orange;
+  text-shadow: red 5px 5px 5px;
+}

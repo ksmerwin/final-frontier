@@ -6,6 +6,16 @@ module.exports = function streamMedia(req, res) {
   var pathname = url.parse(req.url).pathname;
   var filePath = path.join('public', pathname);
       switch(path.extname(pathname)){
+          case ".html":
+          case ".htm":
+            res.setHeader("Content-Type", "text/html");
+            break;
+          case ".css":
+            res.setHeader("Content-Type", "text/css");
+            break;
+          case ".js":
+            res.setHeader("Content-Type", "text/javascript");
+            break;
           case ".wav":
             res.setHeader("Content-Type", "audio/wav");
             break;
@@ -36,10 +46,10 @@ module.exports = function streamMedia(req, res) {
           default:
             res.setHeader('Content-Type', 'application/octet-stream');
       }
-    
+
     var match = /bytes=(\d+)-(\d*)/.exec(req.headers.range);
     var start = parseInt(match[1], 10);
-    
+
     fs.stat(filePath, (err, stats) => {
       if(err) {
         console.error(err);
@@ -47,7 +57,7 @@ module.exports = function streamMedia(req, res) {
         res.end();
         return;
       }
-        
+
       var end = match[2] ? parseInt(match[2], 10) : stats.size - 1;
       res.setHeader("Content-Length", end - start + 1);
       res.setHeader("Accept-Ranges", "bytes");

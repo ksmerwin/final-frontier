@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>card</title>
+    </head>
+  <body>
+    <h1>Fruits</h1>
+    <ul>
+      ${
+        cards.map(function(card){
+          return `<li>${card.id}</li>`;
+        }).join("")
+      }
+    </ul>
+  </body>
+</html>
