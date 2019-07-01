@@ -35,87 +35,10 @@ module.exports = function generateCardHTML(cardData) {
  */
 function generateAudioCardHTML(cardData) {
    
-  fs.readdir(dirPath, function(err, items){
-    if(err) return err;
-    
-    // Create Links
-    var links = items.map(function(item) { 
-    return `<li><a href="${item}">${item}</a></li>`; 
-}); 
-    
-    // Generate HTML
-    var html = `
-      <!DOCTYPE html>
-      <html>
-        <head>
-        <link href="css/final-frontier.css" rel="stylesheet" type="text/css">
-        <meta name="viewport" content="width=device-width, inital-scale=1.0">
-          <title>Index of ${pathname}</title>
-        <head>
-        <body>
-          <div id="content">
-            <div class="card-style">
-                <h2 class="audio-title">${cardData.title}</h2>
-            
-            <div id="audio-pos" style="text-align:center">
-                
-            <audio id="audio" controls="controls" src ="${cardData.source}"></audio>
-                </div>
-            <p style="margin-left: 10px">
-                ${cardData.description}
-            </p>
-            </div> 
-        </div>
-            ${links.join("")}
-          
-        </body>
-      <html>
-    `
-
-
-    // Invoke callback
-    callback(null, html);
-  });
-
-    
-    
-    
-    
-    
-    
-    
-    
-    // TODO: Generate appropriate HTML
-     
-    //    var html = '
-    //<!DOCTYPE html>
-//<html>
-    //<head lang="en-us">
-        //<title>Audio Mockup</title>
-        //<link href="css/mockup.css" rel="stylesheet" type="text/css">
-        //<link href="css/final-frontier.css" rel="stylesheet" type="text/css">
-        //<meta name="viewport" content="width=device-width, inital-scale=1.0">
-    //</head>
-    //<body>
-        //<h1>Audio Mockup</h1>
-        //<div id="content">
-           // <div class="card-style">
-           //     <h2 class="audio-title">${cardData.title}</h2>
-            
-            //<div id="audio-pos" style="text-align:center">
-                
-            //<audio id="audio" controls="controls" src ="${cardData.source}"></audio>
-              //  </div>
-            //<p style="margin-left: 10px">
-             //   ${cardData.description}
-           // </p>
-         //   </div> 
-       // </div> 
-        //<script src="js/final-frontier.js"></script>
-  //  </body>
-//</html>
-        //'
-    return html;
+  var title = document.createElemement('title')
+    title.textContent = cardData[0].title;
+  var source = document.createElement  
+  
 }
 
 

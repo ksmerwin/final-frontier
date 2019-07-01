@@ -1,3 +1,7 @@
 var generate = require('./generate-card-HTML');
 
-generate(cards);
+function showCards(jsonCards){
+    var cards = jsonCards[0];
+    
+    for (var i = 0; i)
+}

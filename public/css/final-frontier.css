@@ -152,7 +152,7 @@ button{
 }
 
 
-#read-more{
+#read-more.card-view{
     position: relative;
     top: 215px;
     visibility: visible;
@@ -173,6 +173,7 @@ button{
     width: auto;
     padding: 10px;
     height:100%;
+    
 }
 
 #read-more.expanded-div{
@@ -182,6 +183,14 @@ button{
 #close.expanded-div{
     visibility:visible;
     position:relative;
+}
+
+#read-more.full-gallery{
+    visibility:hidden;
+}
+
+.expanded-div .card-style{
+    display:none;
 }
 
 /**Audio Card style**/
@@ -328,7 +337,15 @@ img, .para{
     margin-bottom:10px;
     
 }
+    
+.full-gallery .card-style{
+        display: none;
+}
 
+    #read-more .full-gallery{
+        visibility:hidden;
+    }
+    
 }
 
 @media screen and (max-width: 489px){
