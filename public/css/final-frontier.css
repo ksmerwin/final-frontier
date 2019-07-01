@@ -136,6 +136,7 @@ button{
     
 }
 
+
 #content {
     height:300px;
     width:100%;
@@ -175,10 +176,10 @@ button{
 
 #content.expanded-div{
     position: relative;
-    width: auto;
+    width: 100%;
     padding: 10px;
-    height:100%;
-    
+    height:auto;
+    display:block;
 }
 
 #read-more.expanded-div{
@@ -188,6 +189,7 @@ button{
 #close.expanded-div{
     visibility:visible;
     position:relative;
+    right: 3%;
 }
 
 #read-more.full-gallery{
@@ -229,12 +231,12 @@ text-align:center}
     padding-right: 10px;
     padding-left: 10px;
     position:relative;
-    bottom:15px;
 }
 
 .video-title{
     text-align:center;
     height:5px;
+    position:relative;
 }
 
 /**Gallery Card Style**/
@@ -277,6 +279,7 @@ img, .para{
 
 #see-gallery{
     visibility: visible;
+    bottom: 1px;
 }
 
 #see-gallery.full-gallery{
@@ -315,6 +318,7 @@ img, .para{
 #content.full-gallery{
     width:100%;
     height:auto;
+    display:block;
 }
 
 
