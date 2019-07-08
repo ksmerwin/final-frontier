@@ -1,0 +1,49 @@
+[
+    {
+        "id": 1,
+        "type": "audio",
+        "title": "Gravity Assist Podcast: The Moon Rocks! With Barbara Cohen",
+        "description": "Learn how Moon rocks can reveal all kinds of information about our nearest neighbor, as NASA prepares to send astronauts to the Moon and on to Mars.",
+        "source": "media/audio/ga_barbra_cohen_mixtweaks_3.mp3"
+    },
+    {
+        "id": 2,
+        "type": "video",
+        "title": "Go Forward to the Moon",
+        "description": "NASA is going to the Moon and on to Mars, in a measured, sustainable way. Working with U.S. companies and international partners, NASA will push the boundaries of human exploration forward to the Moon. NASA is working to establish a permanent human presence on the Moon within the next decade to uncover new scientific discoveries and lay the foundation for private companies to build a lunar economy. Right now, NASA is taking steps to begin this next era of exploration.",
+        "source": "media/video/NHQ_2019_0311_Go%20Forward%20to%20the%20Moon~small.mp4"
+    },
+    {
+        "id": 3,
+        "type": "audio",
+        "title": "Gravity Assist Podcast: Mapping the Moon, with Noah Petro",
+        "description": "The Lunar Reconnaissance Orbiter, launched 10 years ago this month, has made groundbreaking discoveries about the Moon, and will pave the way for future human exploration with NASA's Artemis mission.",
+        "source": "media/audio/ga_noah_pietro_mix_with_tweaks.mp3"
+    }, 
+    {
+        "id": 4,
+        "type": "video",
+        "title": "Apollo 9: 'A Hell of a Ride'",
+        "description": "50 years ago, we tested the capabilities of our Moon landing spacecraft in Earth’s orbit. Commander James McDivitt, Command Module Pilot David Scott and Lunar Module Pilot Rusty Schweickart performed systems checks and gathered data. The Lunar Module and the Command Module separated by nearly 100 miles and an engine burn check brought them back together. A challenging rendezvous and docking proved the abilities of the hardware. This historic mission launched on March 3, 1969 as an engineering mission and paved the way for future Apollo missions.",
+        "source": "media/video/NHQ_2019_0311_Go%20Forward%20to%20the%20Moon~small.mp4"
+    },{
+        "id": 5,
+        "type": "gallery",
+        "title": "New Horizons Image Gallery",
+        "description": "<p>The New Horizons mission is helping us understand worlds at the edge of our solar system by making the first reconnaissance of the dwarf planet Pluto and by venturing deeper into the distant, mysterious Kuiper Belt – a relic of solar system formation.</p><p>New Horizons launched on Jan. 19, 2006; it swung past Jupiter for a gravity boost and scientific studies in February 2007, and conducted a six-month-long reconnaissance flyby study of Pluto and its moons in summer 2015, culminating with Pluto closest approach on July 14, 2015. As part of an extended mission, pending NASA approval, the spacecraft is expected to head farther into the Kuiper Belt to examine another of the ancient, icy mini-worlds in that vast region, at least a billion miles beyond Neptune’s orbit.</p><p>Sending a spacecraft on this long journey is helping us to answer basic questions about the surface properties, geology, interior makeup and atmospheres on these bodies.</p>",
+        "images": [
+            "media/images/darksideimage_unann.png",
+            "media/images/nh-scatteringmapcontext_06_29_16-v3-small4review.jpg",
+            "media/images/dunes_on_pluto_image.jpg",
+            "media/images/nh-shaded_relief_map-pluto_4-28-16-2.jpg",
+            "media/images/nh-charon-by-plutoshine.jpg",
+            "media/images/pluto_color_mapmosaic.jpg",
+            "media/images/nh-pmap_cyl_hr_lor_600m.jpg"
+        ]
+    },{
+        "id": 6,
+        "type": "article",
+        "title": "The Power for Flight: NASA's Contributions to Aircraft Propulsion", 
+        "body": "<h1>The Power for Flight: NASA’s Contributions to Aircraft Propulsion</h1><p>By Jeremy R. Kinney</p><img src=\"https://www.nasa.gov/sites/default/files/thumbnails/image/propulsion_cover-no-logo.jpg\" alt=\"The Power of Flight cover\" style=\"float: right\"><p>Aircraft propulsion technology provides the power for flight. Since 1958, NASA researchers have pushed the boundaries of the design of power plants for both subsonic and supersonic flight. Innovations that emerged from NASA programs contributed to the development ultra-high bypass turbofans, advanced turboprops, and refined systems reflecting the desire for more efficient, quieter, cleaner, and safer engines. In the process, the agency played a major role as an innovator, facilitator, collaborator, and leader as it interacted with industry and other federal agencies to address fundamental problems facing American society. As a result, the U.S. aircraft propulsion industry has consistently led the world in the development of new technology with improved performance, durability, environmental compatibility, and safety.</p><p>The Power for Flight is a survey of NASA’s work in aircraft propulsion from its origins as the National Advisory Committee for Aeronautics (NACA) to the early 21st century. It introduces NASA’s role in the technology while taking into account economic, political, and cultural dimensions. In these pages, you will meet members of a national aeronautical community that shaped aircraft propulsion. The dramatic development and use of aircraft propulsion technology were the result of a communal response to challenges and concerns that tell us much about the priorities, goals, and determination of a society that needed engines and related systems for military, commercial, and general aviation.</p><p>Kindle readers: <a href=\"https://www.nasa.gov/sites/default/files/atoms/files/power_for_flight_nasas_contributions_to_aircraft_propulsion_the_-_jeremy_r._kinney.mobi\">MOBI [9.7 MB]</a></p><p>All other eBook readers: <a href=\"https://www.nasa.gov/sites/default/files/atoms/files/power_for_flight_nasas_contributions_to_aircraft_propulsion_the_-_jeremy_r._kinney.epub\">EPUB [9.5 MB]</a></p><p>Fixed layout: <a href=\"https://www.nasa.gov/sites/default/files/atoms/files/power-for-flight-tagged.pdf\">PDF [5 MB]</a></p>"
+    }
+]

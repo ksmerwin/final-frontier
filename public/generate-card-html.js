@@ -1,16 +1,16 @@
+
 /** @function generateCardHTML 
- * Generates the appropriate HTML for the supplied card data 
- * @param {object} cardData - An object describing a card 
- * @returns {string} the generated HTML 
+ * Generates the appropriate HTML for the supplied card data
+ * @param {object} cardData - An object describing a card
+ * @returns {string} the generated HTML
  */
 
-var cards = cards.parse();
-
-
-
-module.exports = function generateCardHTML(cardData) {
+function generateCardHTML(cardData) {
     // TODO: Generate appropriate HTML
-    switch (cardData.type){
+    switch(cardData.type) {
+         case 'article':
+            generateArticleCardHTML(cardData);
+            break;
         case "audio":
             generateAudioCardHTML(cardData);
             break;
@@ -20,48 +20,34 @@ module.exports = function generateCardHTML(cardData) {
         case "gallery":
             generateGalleryCardHTML(cardData);
             break;
-        case "article":
-            generateArticleCardHTML(cardData);
-            break;
         default:
             break;
     }
 }
-
 /** @function generateAudioCardHTML
- * A helper function to generate audio card HTML 
- * @param {object} cardData - the audio card data 
- * @returns {string} the generated html 
+ * A helper function to generate audio card HTML
+ * @param {object} cardData - the audio card data
+ * @returns {string} the generated html
  */
+
 function generateAudioCardHTML(cardData) {
-   
-  var title = document.createElemement('title')
+    /*var title = document.createElement('title');
     title.textContent = cardData[0].title;
-  var source = document.createElement  
-  
+    var source = document.createElement();*/
 }
-
-
-
 /** @function generateArticleCardHTML
- * A helper function to generate article card HTML 
- * @param {object} cardData - the article card data 
- * @returns {string} the generated html 
+ * A helper function to generate article card HTML
+ * @param {object} cardData - the article card data
+ * @returns {string} the generated html
  */
+
 function generateArticleCardHTML(cardData) {
     // TODO: Generate appropriate HTML
-    var html = '
+    var html = `
     <!DOCTYPE html>
 <html>
-    //<head lang="en-us">
-        //<title>Article Mockup</title>
-        //<link href="css/mockup.css" rel="stylesheet" type="text/css">
-        //<link href="css/final-frontier.css" rel="stylesheet" type="text/css">
-        //<meta name="viewport" content="width=device-width, inital-scale=1.0">
-    //</head>
+   
     <body>
-       // <h1>Article Mockup</h1>
-        <div id="content" >
             <div id="card-view" class="card-style">
             <h2 class="article-title">${cardData.title}<button onclick="expand()" id="close">
                     Close
@@ -72,43 +58,28 @@ function generateArticleCardHTML(cardData) {
  
                 <p>${cardData.body}</p>
             </div>
-        </div> 
-        //<script src="js/final-frontier.js"></script>
     </body>
 </html>
-    '
-    
+    `
     return html;
 }
-
-
-
 /** @function generateGalleryCardHTML
- * A helper function to generate gallery card HTML 
- * @param {object} cardData - the gallery card data 
- * @returns {string} the generated html 
+ * A helper function to generate gallery card HTML
+ * @param {object} cardData - the gallery card data
+ * @returns {string} the generated html
  */
-
 
 function generateGalleryCardHTML(cardData) {
     // TODO: Generate appropriate HTML
-   var html = '
+    var html = `
    <!DOCTYPE html>
 <html>
-   // <head lang="en-us">
-     //   <title>Gallery Mockup</title>
-       // <link href="css/mockup.css" rel="stylesheet" type="text/css">
-        //<link href="css/final-frontier.css" rel="stylesheet" type="text/css">
-        //<meta name="viewport" content="width=device-width, inital-scale=1.0">
-    //</head>
+  
     <body>
-        //<h1>Gallery Mockup</h1>
-        //<div id="content">
                <div id="gallery"  class="card-style">     
                   <h2 class="gallery-title" style="text-align: center">${cardData.title}<div class="button-pos1"><button onclick="seeGallery()" id="see-gallery">
                     See Gallery
                       </button> </div> </h2>
-                   
                    
                    <button onclick="seeGallery()" id="close-gal">
                     Close
@@ -128,33 +99,24 @@ function generateGalleryCardHTML(cardData) {
                    </div>
             </div>
             
-        //</div> 
-        //<script src="js/final-frontier.js"></script>
+       
     </body>
-</html> '
+</html> `
     return html;
 }
-
 /** @function generateVideoCardHTML
- * A helper function to generate video card HTML 
- * @param {object} cardData - the video card data 
- * @returns {string} the generated html 
+ * A helper function to generate video card HTML
+ * @param {object} cardData - the video card data
+ * @returns {string} the generated html
  */
-
 
 function generateVideoCardHTML(cardData) {
     // TODO: Generate appropriate HTML
-    var html = '
+    var html = `
     <!DOCTYPE html>
 <html>
-    //<head lang="en-us">
-      //  <title>Video Mockup</title>
-        //<link href="css/mockup.css" rel="stylesheet" type="text/css">
-        //<link href="css/final-frontier.css" rel="stylesheet" type="text/css">
-        //<meta name="viewport" content="width=device-width, inital-scale=1.0">
-    //</head>
+    
     <body>
-      //  <h1>Video Mockup</h1>
         <div id="content">
             <div class="video-layout">
             <div class="card-style">   
@@ -169,10 +131,8 @@ function generateVideoCardHTML(cardData) {
             </div>
         </div>
         </div> 
-        //<script src="js/final-frontier.js"></script>
+        
     </body>
-</html> '
-    
+</html> `
     return html;
 }
-
