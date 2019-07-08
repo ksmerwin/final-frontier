@@ -31,9 +31,23 @@ function generateCardHTML(cardData) {
  */
 
 function generateAudioCardHTML(cardData) {
-    /*var title = document.createElement('title');
-    title.textContent = cardData[0].title;
-    var source = document.createElement();*/
+    
+    var html = `<body>
+            <div class="card-style">
+                <h2 class="audio-title">${cardData.title}</h2>
+            <div id="audio-pos" style="text-align:center">
+            <audio id="audio" controls="controls" src ="${cardData.source}"></audio>
+                </div>
+            <p style="margin-left: 10px">
+            ${cardData.description}
+            </p>
+            </div> 
+            
+        </div> 
+    </body>
+</html>
+`
+    return html;
 }
 /** @function generateArticleCardHTML
  * A helper function to generate article card HTML
@@ -94,7 +108,6 @@ function generateGalleryCardHTML(cardData) {
                    <img   class="img5" src ="${cardData.images[4]}">
                    <img  class="img6" src ="${cardData.images[5]}">
                    <img   class="img7" src ="${cardData.images[6]}">
-                   <img   class="img8" src ="${cardData.images[7]}">
                </div>
                    </div>
             </div>
