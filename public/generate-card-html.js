@@ -85,6 +85,7 @@ function generateArticleCardHTML(cardData) {
 
 function generateGalleryCardHTML(cardData) {
     // TODO: Generate appropriate HTML
+    
     var html = `
    <!DOCTYPE html>
 <html>

@@ -1,0 +1,18 @@
+<!doctype HTML>
+<html>
+<form method="POST">
+          <fieldset>
+            <label for="title">Title of Audio:</label>
+            <input type="text" name="title">
+            <label for="description">Description of article:</label>
+            <input type="text" name="description">
+            <form enctype="multipart/form-data" action="/upload" method="POST">
+        <label for="audio">Audio File:</label>
+        <input name="audio" type="file" required>
+        </form>  
+          </fieldset>
+          <fieldset>
+            <input type="submit" value="Upload">
+          </fieldset>
+        </form>
+</html>

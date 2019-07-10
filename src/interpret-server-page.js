@@ -2,6 +2,7 @@ const fs = require('fs');
 const url = require('url');
 const path = require('path');
 const vm = require('vm');
+const querystring = require('querystring');
 
 /** @function interpretServerPage() 
  * Serves a server page, interpreting any 
@@ -24,16 +25,25 @@ module.exports = function interpretServerPage(req, res) {
     res.end();
     return;
   }
-  var script = "`" + body.replace("`", "\`") + "`";
-  var sandbox = {
-      cards: require('../data/cards.json')
-  }
-  try {
-      var html = vm.runInNewContext(script, sandbox);
+ function serve(html) {
       res.setHeader("Content-Type", "text/html");
       res.setHeader("Content-Length", html.length);
       res.end(html);
+    }
+    
+    try {
+      const queryString = url.parse(req.url).query;
+      const queryParams = querystring.parse(queryString);
+      var sandbox = {
+        dataSource: dataSource,
+        queryParams: queryParams,
+        postParams: req.body || {},
+        serve: serve
+      }
+      // Interpret the page
+     vm.runInNewContext(body, sandbox);
   } catch(err) {
+      console.error(err);
       res.statusCode = 500;
       res.statusMessage = "Server Error";
       res.end();

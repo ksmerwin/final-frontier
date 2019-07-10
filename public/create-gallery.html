@@ -1,0 +1,19 @@
+<!doctype HTML>
+<html>
+<form method="POST">
+    <fieldset>
+        <label for="title">Title of Gallery:</label>
+        <input type="text" name="title">
+        <label for="description">Description of Gallery:</label>
+        <input type="text" name="description">
+        <form enctype="multipart/form-data" action="/upload" method="POST">
+            <label for="gallery">Gallery File(s):</label>
+            <input multiple name="gallery" type="file" required>
+        </form>
+    </fieldset>
+    <fieldset>
+        <input type="submit" value="Upload">
+    </fieldset>
+</form>
+
+</html>

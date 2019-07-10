@@ -28,3 +28,4 @@ function seeGallery() {
     close2.classList.toggle("full-gallery");
     seeGal.classList.toggle("full-gallery");
 }
+

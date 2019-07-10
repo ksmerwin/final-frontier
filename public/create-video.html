@@ -1,0 +1,19 @@
+<!doctype HTML>
+<html>
+<form method="POST">
+    <fieldset>
+        <label for="title">Title of Video:</label>
+        <input type="text" name="title">
+        <label for="description">Description of Video:</label>
+        <input type="text" name="description">
+        <form enctype="multipart/form-data" action="/upload" method="POST">
+            <label for="video">Video File:</label>
+            <input name="video" type="file" required>
+        </form>
+    </fieldset>
+    <fieldset>
+        <input type="submit" value="Upload">
+    </fieldset>
+</form>
+
+</html>

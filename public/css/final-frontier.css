@@ -10,6 +10,7 @@
 /**All style**/
  h1, h2, h3, h4 {
     font-family:"TNGCredits" !important;
+    margin-bottom:45px;
 }
 * {
     font-family:"Verdana";
@@ -18,8 +19,39 @@
     box-shadow: gray 2px 2px 2px;
     border-radius: 25px;
 }
+p {
+    margin-top:25px;
+}
 button {
     box-shadow:black 2px 2px 2px;
+}
+
+#create-card{
+    margin-bottom:10px;
+    float:right;
+}
+
+.expanded-div #create-card{
+    display:hidden;
+}
+
+form {
+  border: 1px solid gray;
+  max-width: 500px;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+input[type="submit"] {
+  font-size: 1.5rem;
+  border: 1px solid gray;
+  background-color: lightgray;
+}
+
+
+ul{
+    list-style-type:none;
+    
 }
 /****main style***/
  @media screen and (min-width: 490px) {
@@ -117,10 +149,9 @@ button {
     box-shadow: gray 3px 3px 3px;
     border-radius: 25px;
 }
-#read-more.card-view {
-    position: relative;
-    top: 215px;
-    visibility: visible;
+
+.button-pos{
+    margin-top:180px;
 }
 #close {
     position: absolute;
@@ -151,9 +182,13 @@ button {
 }
 /**Audio Card style**/
  #audio {
-    text-align:center
+    text-align:center;
+}
+#audio-pos {
+    position:relative;
 }
 .audio-title {
+    position: relative;
     text-align: center;
     height:27px;
 }
@@ -172,6 +207,7 @@ button {
     padding-right: 10px;
     padding-left: 10px;
     position:relative;
+    margin-top:25px;
 }
 .video-title {
     text-align:center;
@@ -205,7 +241,7 @@ img, .para {
 }
 #see-gallery {
     visibility: visible;
-    top: 500px;
+    margin-top:220px;    
 }
 #see-gallery.full-gallery {
     visibility:hidden;
